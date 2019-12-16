@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>eaa1c37f-21f5-419b-8390-ac15fb0c5b03</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>Power Media Player</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="Microsoft.DirectX.AudioVideoPlayback" />
+    <Reference Include="System.Drawing" />
+    <Compile Include="AssemblyInfo.vb" />
+    <Compile Include="Global.vb" />
+    <Compile Include="Power_Media_Player\My\MyApplication.vb" />
+    <Compile Include="Power_Media_Player\My\MyComputer.vb" />
+    <Compile Include="Power_Media_Player\My\MyProject.vb" />
+    <Compile Include="Power_Media_Player\About.vb" />
+    <Compile Include="Power_Media_Player\FileInfo.vb" />
+    <Compile Include="Power_Media_Player\Main.vb" />
+    <Compile Include="Power_Media_Player\My\Resources\Resources.vb" />
+    <Compile Include="Power_Media_Player\My\MySettings.vb" />
+    <Compile Include="Power_Media_Player\PowerProgressbar.vb" />
+    <Compile Include="Power_Media_Player\Settings.vb" />
+    <Compile Include="Power_Media_Player\SplashScreen.vb" />
+    <Compile Include="Power_Media_Player\Updates.vb" />
+    <EmbeddedResource Include="Power_Media_Player.Settings.resources" />
+    <EmbeddedResource Include="Power_Media_Player.PowerProgressbar.resources" />
+    <EmbeddedResource Include="Power_Media_Player.Main.resources" />
+    <EmbeddedResource Include="Power_Media_Player.FileInfo.resources" />
+    <EmbeddedResource Include="Power_Media_Player.Resources.resources" />
+    <EmbeddedResource Include="Power_Media_Player.About.resources" />
+    <EmbeddedResource Include="Power_Media_Player.SplashScreen.resources" />
+    <EmbeddedResource Include="Power_Media_Player.Updates.resources" />
+  </ItemGroup>
+</Project>
